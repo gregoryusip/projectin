@@ -1,0 +1,252 @@
+@import url("https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap");
+
+:root {
+    /* =========== FONT FAMILY ========== */
+    --body-font: "Zen Maru Gothic", sans-serif;
+
+    /* =========== FONT COLOR ========== */
+    --body-color: #f7f7f7;
+    --first-color: #f05454;
+    --secondary-color: #d9386c;
+    --third-color: #f9654b;
+    --fourth-color: #bcbcbc;
+    --font-color: #060930;
+    --font-alt-color: #2f2e41;
+
+    /* =========== FONT SIZE ========== */
+    --extra-big-font-size: 3rem;
+    --big-font-size: 2rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1.125rem;
+    --normal-font-size: 1rem;
+    /* --normal-font-size: 0.938rem; */
+    --small-font-size: 0.813rem;
+    --smaller-font-size: 0.75rem;
+
+    /* ========== FONT WEIGHT ========== */
+    --font-light: 300;
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-semi-bold: 600;
+    --font-bold: 700;
+    --font-extra-bold: 800;
+    --font-extra-black: 900;
+
+    /* ========== MARGIN ========== */
+    --mb-0-25: 0.25rem;
+    --mb-0-5: 0.5rem;
+    --mb-0-75: 0.75rem;
+    --mb-1: 1rem;
+    --mb-1-5: 1.5rem;
+    --mb-2: 2rem;
+    --mb-2-5: 2.5rem;
+    --mb-3: 3rem;
+}
+
+/* =========== BODY ========== */
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-regular);
+    background-color: #f7f7f7;
+    color: var(--font-color);
+    max-height: 100vh;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--font-color);
+    transition: ease 0.4s;
+    cursor: pointer;
+}
+a:hover {
+    color: var(--first-color);
+}
+
+/* ========== COLUMN ========== */
+.column {
+    height: 100vh;
+}
+
+@media (max-width: 427px) {
+    .column {
+        height: 80vh;
+    }
+}
+/* .col-md {
+    height: 100vh;
+} */
+/* ========== LOGIN COLUMN ========== */
+/* .login-page .column {
+    padding: 100px;
+} */
+/* .login-page .col-md {
+    padding: 100px;
+} */
+/* LEFT SIDE */
+.login-left-side {
+    background-color: #fff;
+    color: var(--font-color);
+}
+
+.button-login-google {
+    background-color: var(--first-color);
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
+    color: #fff;
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-bold);
+}
+.button-login-facebook {
+    background-color: var(--font-color);
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
+    color: #fff;
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-bold);
+}
+.button-login-google i,
+.button-login-facebook i {
+    font-size: var(--h1-font-size);
+}
+
+.dash-seperate {
+    width: 100%;
+    height: 1.5px;
+    background-color: var(--fourth-color);
+}
+.atau-seperate {
+    margin-top: -15px;
+    display: flex;
+    justify-content: center;
+}
+.atau-seperate p {
+    width: fit-content;
+    padding: 0 10px;
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-bold);
+    color: var(--fourth-color);
+    background-color: #fff;
+}
+
+/* LOGIN FORM */
+.form-control {
+    transition: all 0.5s ease;
+}
+.form-control:focus,
+.form-control:active {
+    outline: none;
+    box-shadow: none;
+    border-color: var(--fourth-color);
+    background-color: #eeeeee;
+}
+.form-label {
+    color: var(--font-color);
+    /* font-size: var(--normal-font-size); */
+}
+.form-text a {
+    font-weight: var(--font-bold);
+}
+
+.form-password {
+    position: relative;
+}
+.toggle-password {
+    position: absolute;
+    top: 32px;
+    right: 15px;
+    font-size: var(--h1-font-size);
+    color: var(--fourth-color);
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+.toggle-password:hover {
+    color: var(--font-color);
+}
+
+.button-submit {
+    width: 100%;
+    border: 1px solid var(--first-color);
+    border-radius: 10px;
+    padding: 10px 0;
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-bold);
+    color: var(--first-color);
+    background-color: #fff;
+    transition: all 0.5s ease;
+}
+.button-submit:hover {
+    color: var(--font-color);
+    background-color: var(--first-color);
+}
+
+/* RIGHT SIDE */
+.login-right-side {
+    background-color: var(--font-color);
+    color: #fff;
+}
+.login-right-side h1 {
+    font-weight: var(--font-extra-bold);
+}
+.login-right-side span {
+    color: var(--first-color);
+}
+
+/* ========== REGISTER COLUMN ========== */
+/* .register-page .column {
+    padding: 70px;
+} */
+/* .register-page .col-md {
+    padding: 100px;
+} */
+/* REGISTER CLIENT */
+/* LEFT SIDE */
+.register-left-side {
+    background-color: var(--font-color);
+    color: #fff;
+}
+.register-left-side h1 {
+    font-weight: var(--font-extra-bold);
+}
+.register-left-side span {
+    color: var(--first-color);
+}
+
+/* RIGHT SIDE */
+.register-right-side {
+    background-color: #fff;
+    color: var(--font-color);
+}
+.col-md.register-right-side {
+    padding: 50px 100px;
+}
+.register-right-side h6 a,
+.login-page h6 a,
+.register-page h6 a {
+    color: var(--first-color);
+    transition: all 0.5s ease;
+}
+.register-right-side h6 a:hover,
+.login-page h6 a:hover,
+.register-page h6 a:hover {
+    text-decoration: underline;
+}
+.form-check span {
+    color: var(--first-color);
+    font-weight: var(--font-medium);
+}

@@ -1,0 +1,459 @@
+@import url("https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap");
+
+:root {
+  /* =========== FONT FAMILY ========== */
+  --body-font: "Zen Maru Gothic", sans-serif;
+
+  /* =========== FONT COLOR ========== */
+  --body-color: #f7f7f7;
+  --first-color: #f05454;
+  --secondary-color: #d9386c;
+  --third-color: #f9654b;
+  --fourth-color: #bcbcbc;
+  --font-color: #2f2e41;
+  --font-alt-color: #333;
+
+  /* =========== FONT SIZE ========== */
+  --extra-big-font-size: 3rem;
+  --big-font-size: 2rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1.125rem;
+  --normal-font-size: 1rem;
+  /* --normal-font-size: 0.938rem; */
+  --small-font-size: 0.813rem;
+  --smaller-font-size: 0.75rem;
+
+  /* ========== FONT WEIGHT ========== */
+  --font-light: 300;
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  --font-bold: 700;
+  --font-extra-bold: 800;
+  --font-extra-black: 900;
+
+  /* ========== MARGIN ========== */
+  --mb-0-25: 0.25rem;
+  --mb-0-5: 0.5rem;
+  --mb-0-75: 0.75rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+  --mb-3: 3rem;
+}
+
+/* =========== BODY ========== */
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-regular);
+  background-color: #f7f7f7;
+  color: var(--font-color);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--font-color);
+  transition: ease 0.4s;
+  cursor: pointer;
+}
+a:hover {
+  color: var(--font-color);
+}
+input:hover,
+input:active,
+input:focus,
+.btn:hover,
+.btn:active,
+.btn:focus,
+textarea:hover,
+textarea:active,
+textarea:focus {
+  outline: 0px !important;
+  -webkit-appearance: none;
+  box-shadow: none !important;
+}
+
+/* ========== NAVBAR ========== */
+.navbar {
+  background-color: white;
+}
+.navbar-nav .nav-link {
+  color: var(--font-color);
+  transition: all 0.5s ease;
+}
+.navbar-nav .nav-link:hover {
+  color: var(--first-color);
+}
+.nav-item .nav-link.active {
+  color: var(--first-color);
+  font-weight: var(--font-extra-black);
+}
+.navbar-toggler {
+  border: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 25px;
+  position: relative;
+}
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+  outline: none;
+  box-shadow: none;
+  border: 0;
+}
+.navbar-toggler input {
+  position: absolute;
+  width: 45px;
+  height: 30px;
+  right: 15px;
+  top: 13px;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+.navbar-toggler span {
+  width: 28px;
+  height: 3px;
+  background-color: var(--font-color);
+  display: block;
+  transition: all 1s ease;
+}
+.middle-bar {
+  margin: 5px 0;
+}
+/* SEARCH FORM */
+/* .search-form-container {
+  position: relative;
+} */
+.search-form-input {
+  border: 1px solid var(--first-color);
+  border-radius: 5px;
+  width: 100%;
+}
+.search-form-input span {
+  background-color: #fff;
+  border: none;
+  width: fit-content;
+}
+.search-form-input input {
+  border: none;
+  outline: none;
+}
+.search-form-icon {
+  font-size: 20px;
+}
+/* DROPDOWN NAVBAR */
+.dropdown-menu {
+  width: 100%;
+  margin-top: -1px !important;
+}
+/* HAMBURGER MENU ANIMATION */
+.navbar-toggler span:nth-child(2) {
+  transform-origin: 0 0;
+}
+.navbar-toggler span:nth-child(4) {
+  transform-origin: 0 100%;
+}
+.navbar-toggler input:checked ~ span:nth-child(2) {
+  background-color: var(--font-color);
+  transform: rotate(45deg) translate(-1px, -2px);
+}
+.navbar-toggler input:checked ~ span:nth-child(4) {
+  background-color: var(--font-color);
+  transform: rotate(-45deg) translate(-1px, 2px);
+}
+.navbar-toggler input:checked ~ span:nth-child(3) {
+  opacity: 0;
+  transform: scale(0);
+}
+/* Change Background Header */
+.scroll-header {
+  /* box-shadow: 0 1px 4px rgba(255, 0, 0, 0.15); */
+  /* border-bottom: 5px var(--font-color) solid; */
+}
+/* Category Navbar Carousel */
+.category-nav-carousel {
+  border: 2px solid var(--first-color);
+  border-left: none;
+  border-right: none;
+  background-color: #fff;
+  z-index: 2;
+}
+.nav-scroller {
+  position: relative;
+  z-index: 2;
+  height: 2.75rem;
+  overflow-y: hidden;
+}
+.nav-scroller .nav {
+  display: flex;
+  flex-wrap: nowrap;
+  padding-bottom: 1rem;
+  margin-top: -1px;
+  overflow-x: auto;
+  text-align: center;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+.nav-scroller a {
+  color: var(--font-color);
+  transition: all 0.5s ease;
+}
+.nav-scroller a:hover {
+  color: var(--first-color);
+}
+
+/* ========== MAIN ========== */
+main {
+  margin-top: 130px;
+}
+/* SECTION TITLE */
+.section_title h3 {
+  font-weight: var(--font-bold);
+  text-transform: uppercase;
+}
+.section_subtitle p {
+  font-weight: var(--font-regular);
+  font-size: var(--normal-font-size);
+}
+
+/* ========== PROFILE JUMBOTRON ========== */
+.profile-jumbotron {
+  width: 100%;
+  height: 300px;
+
+  background-image: url(../img/carousel/1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* ========== PROFILE BOX ========== */
+.profile-box {
+  width: 100%;
+  /* height: 300px; */
+  margin-top: -30px;
+  border-radius: 10px;
+
+  background-color: #fff;
+  box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.3), 0 0 1px 0 rgba(0, 0, 0, 0.25);
+}
+.profile-img {
+  width: 100px;
+  height: 100px;
+
+  border-radius: 50%;
+}
+.profile-freelancer-rating {
+  font-weight: var(--font-bold);
+}
+.profile-freelancer-rating-count {
+  color: #7a7a7a;
+}
+.profile-freelancer-price span {
+  color: var(--first-color);
+  font-weight: var(--font-bold);
+}
+.profile-box-feature-answer {
+  font-weight: var(--font-semi-bold);
+}
+.profile-box-reaction i {
+  font-size: 25px;
+  transition: all 0.5s ease;
+}
+.profile-box-reaction i:hover {
+  color: var(--first-color);
+}
+
+.button-tooltip {
+  border: none;
+  background-color: transparent;
+}
+.button-first-profile {
+  width: 100%;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+
+  background-color: var(--first-color);
+  color: var(--font-color);
+  font-weight: var(--font-semi-bold);
+  transition: all 0.5s ease;
+}
+.button-first-profile:hover {
+  background-color: var(--font-color);
+  color: var(--first-color);
+  font-weight: var(--font-semi-bold);
+}
+.button-second-profile {
+  width: 100%;
+  padding: 10px 20px;
+  border: 1px solid var(--font-color);
+  border-radius: 10px;
+
+  background-color: #fff;
+  color: var(--font-color);
+  font-weight: var(--font-semi-bold);
+  transition: all 0.5s ease;
+}
+.button-second-profile:hover {
+  background-color: var(--font-color);
+  color: var(--first-color);
+  font-weight: var(--font-semi-bold);
+}
+
+/* ========== PROFILE DESCRIPTION BOX ========== */
+.profile-descriptions-box,
+.profile-portfolios-box {
+  border-radius: 10px;
+
+  background-color: #fff;
+  box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.3), 0 0 1px 0 rgba(0, 0, 0, 0.25);
+}
+.profile-languages p,
+.profile-educations p,
+.profile-certifications p {
+  font-weight: var(--font-medium);
+}
+.profile-languages span,
+.profile-educations span,
+.profile-certifications span {
+  color: #7a7a7a;
+}
+.profile-skills .col-6 {
+  width: fit-content;
+}
+.profile-skill {
+  border: 1px solid var(--first-color);
+  border-radius: 50px;
+  padding: 5px 15px;
+
+  background-color: #fff;
+  color: var(--font-color);
+  transition: all 0.5s ease;
+}
+.profile-skill:hover {
+  background-color: var(--first-color);
+  font-weight: var(--font-semi-bold);
+}
+
+/* ========== MY GIGS ========== */
+.my-gigs-box {
+  border-radius: 10px;
+
+  /* background-color: #fff;
+  box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.3), 0 0 1px 0 rgba(0, 0, 0, 0.25); */
+}
+
+/* ========== HOMEPAGE ========== */
+.button-standard {
+  padding: 10px;
+  width: 70%;
+  border: none;
+  border-radius: 10px;
+  font-size: var(--normal-font-size);
+  font-weight: bold;
+  color: var(--font-color);
+  background-color: var(--first-color);
+  transition: all 0.5s ease;
+}
+.button-standard:hover {
+  color: var(--first-color);
+  background-color: var(--font-color);
+}
+
+/* ========== PROJECT POPULER MINGGU INI ========== */
+
+/* ========== FREELANCER POPULER ========== */
+.freelancer-container a:hover {
+  color: var(--font-color);
+}
+.freelancer-card {
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.3), 0 0 1px 0 rgba(0, 0, 0, 0.25);
+  transition: all 0.5s ease;
+}
+.freelancer-card:hover {
+  transform: scale(1.025);
+}
+.freelancer-card .freelancer-portfolio {
+  border-radius: 10px 10px 0 0;
+}
+.freelancer-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.freelancer-love {
+  background-color: transparent;
+  border: none;
+  font-size: 25px;
+  color: var(--font-color);
+}
+.freelancer-rating {
+  font-weight: var(--font-bold);
+}
+.freelancer-rating-count {
+  color: #7a7a7a;
+}
+.freelancer-price span {
+  color: var(--first-color);
+  font-weight: var(--font-bold);
+}
+
+/* ========== CARA KERJA PROJECT-IN ========== */
+
+/* ========== FOOTER ========== */
+.container-footer {
+  border-top: 3px solid var(--font-color);
+}
+footer ul li a {
+  color: var(--font-alt-color);
+}
+.footer-copy-right {
+  border-top: 1px solid var(--font-color);
+}
+.footer-brand-logo {
+  height: 20px;
+}
+.footer-copy-right i {
+  font-size: 30px;
+  color: var(--font-color);
+  transition: all 0.5s ease;
+}
+.footer-copy-right i:hover {
+  color: var(--first-color);
+}
+
+/* ========== SIDEBAR CATEGORY ========== */
+
+/* ========== JOB CATEGORY CARD ========== */
+
+/* ========== RESPONSIVE ========== */
+/* SMALL DEVICES */
+@media screen and (max-width: 349px) {
+}
+@media screen and (min-width: 350px) {
+}
+@media screen and (min-width: 768px) {
+}
+@media screen and (min-width: 1024px) {
+}
+@media screen and (min-width: 1400px) {
+}

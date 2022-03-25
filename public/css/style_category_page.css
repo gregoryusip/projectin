@@ -1,0 +1,53 @@
+/* main {
+    margin-top: 170px;
+} */
+/* SECTION TITLE */
+.section_title h3 {
+    font-weight: var(--font-bold);
+    text-transform: uppercase;
+}
+.section_subtitle p {
+    font-weight: var(--font-regular);
+    font-size: var(--normal-font-size);
+}
+
+/* ========== SIDEBAR CATEGORY ========== */
+.sidebar-arrow-button {
+    border: 0;
+    background-color: transparent;
+    font-size: 20px;
+    transition: all 0.5s ease;
+}
+.sidebar-arrow-button[aria-expanded="true"] {
+    transform: rotate(90deg);
+}
+.collapse ul li a:hover {
+    color: var(--first-color);
+}
+
+/* ========== JOB CATEGORY CARD ========== */
+.job-category-card {
+    /* width: 300px; */
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    border: none;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+}
+.job-category-title {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    border-radius: 0 0 10px 10px;
+}
+.job-category-title h6 {
+    color: #fff;
+    transition: all 0.5s ease;
+}
+.job-category-card:hover .job-category-title h6 {
+    transform: scale(1.1);
+    color: var(--first-color);
+}
